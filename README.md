@@ -51,6 +51,7 @@ You won't need all of them, but you'll need some combination of them in order to
 * Create a navigation menu for `Home` and `Add New Card`
 * Create a template `_homeView.html` and move the existing HTML on the homepage to the view
 * Create a new route and template for `Add New Card`
+* Refactor cards from array into a `CardService` that retrieves it from the database
 
 ## Lab
 
