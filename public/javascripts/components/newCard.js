@@ -4,29 +4,16 @@
   var app = angular.module('CardsAgainstAssembly');
 
   app.component('newCard', {
-    controller: function($http, $location) {
+    controller: function($http, $location, CardService) {
       this.newCard = { question: '' };
 
       this.addCard = function() {
         var self = this;
 
-        $http({
-          method: 'POST',
-          url: '/cards',
-          data: {
-            question: self.newCard.question
-          }
-        }).then(function successCallback(response) {
-
-          // Redirect back to the homepage and display all the cards
-          // @todo: Instead of reloading all cards just push this one
+        CardService.save(self.newCard.question, function() {
           $location.path('/');
-
-        }, function errorCallback(response) {
-            console.log('error', response);
+          self.newCard.question = '';
         });
-
-        this.newCard.question = '';
       };
     },
     template: `

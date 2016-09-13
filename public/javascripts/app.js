@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  
+
   var app = angular.module('CardsAgainstAssembly', ['ngRoute']);
 
   app.config(function($routeProvider) {
@@ -15,5 +15,4 @@
         templateUrl: '/templates/_homeView.html'
       });
   });
-
 })();
