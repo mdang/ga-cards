@@ -7,20 +7,18 @@ router.get('/', function(req, res, next) {
   res.render('index', { });
 });
 
-/* GET all the cards */
 router.get('/cards', function(req, res, next) {
   Card.find({ }, function(err, cards) {
     if (err) console.log(err);
-
+    
     res.json(cards);
   });
 });
 
-/* POST create a new card */
 router.post('/cards', function(req, res, next) {
-  var question = req.body.question;
+  var question = req.body.question;  
 
-  var newCard = new Card({
+  var newCard = Card({
       question: question
   });
 
