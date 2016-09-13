@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 
 var cardSchema = new mongoose.Schema({
   question: { type: String, required: true },
-  createdAt: Date,
-  updatedAt: Date
+  created_at: Date,
+  updated_at: Date
 });
 
 var Card = mongoose.model('Card', cardSchema);
