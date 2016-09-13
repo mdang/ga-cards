@@ -1,14 +1,16 @@
 (function() {
+  'use strict';
+  
   var app = angular.module('CardsAgainstAssembly');
 
   app.component('card', {
     bindings: {
-      //the '@' binding automatically interpolates the "{{}}" if 
+      //the '@' binding automatically interpolates the "{{}}" if
       //  they exist in the attributes
       question: '@'
     },
     controller: function() {
-      
+
     },
     template: `
       <div class="card" ng-click="flipcard=!flipcard">

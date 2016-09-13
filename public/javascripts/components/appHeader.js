@@ -1,12 +1,14 @@
 (function() {
+  'use strict';
+  
   var app = angular.module('CardsAgainstAssembly');
 
   app.component('appHeader', {
     bindings: {
-      
+
     },
     controller: function () {
-      
+
     },
     template: `
       <header class="navbar">

@@ -1,6 +1,8 @@
 (function() {
-  var app = angular.module('CardsAgainstAssembly', ['ngRoute']);
+  'use strict';
   
+  var app = angular.module('CardsAgainstAssembly', ['ngRoute']);
+
   app.config(function($routeProvider) {
     $routeProvider
       .when('/new', {

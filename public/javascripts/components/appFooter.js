@@ -1,9 +1,11 @@
 (function() {
+  'use strict';
+
   var app = angular.module('CardsAgainstAssembly');
 
   app.component('appFooter', {
     bindings: {
-      //the '@' binding automatically interpolates the "{{}}" if 
+      //the '@' binding automatically interpolates the "{{}}" if
       //  they exist in the attributes
       madeWith: '@'
     },

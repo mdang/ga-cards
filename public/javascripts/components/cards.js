@@ -1,19 +1,14 @@
 (function() {
+  'use strict';
+  
   var app = angular.module('CardsAgainstAssembly');
 
   app.component('cards', {
-    controller: function($http) {
+    controller: function(Cards) {
       var self = this;
 
-      $http({
-        method: 'GET',
-        url: '/cards'
-      }).then(function successCallback(response) {
-        console.log('success', response.data);
-
-        self.cards = response.data;
-      }, function errorCallback(response) {
-        console.log('error', response);
+      Cards.get(function(result) {
+        self.cards = result;
       });
 
       // this.cards = [
