@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CardsAgainstAssembly">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cards Against Assembly™</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+  <script src="/javascripts/app.js" charset="utf-8"></script>
+  <script src="/javascripts/components/appFooter.js" charset="utf-8"></script>
+  <script src="/javascripts/components/appHeader.js" charset="utf-8"></script>
+  <script src="/javascripts/components/appNav.js" charset="utf-8"></script>
+  <script src="/javascripts/components/cards.js" charset="utf-8"></script>
+  <script src="/javascripts/components/card.js" charset="utf-8"></script>
+  <script src="/javascripts/components/addCard.js" charset="utf-8"></script>
+  <script src="/javascripts/services/cardService.js" charset="utf-8"></script>
+
+</head>
+<body>
+  <div class="container">
+    <app-header title="Cards Against Assembly"></app-header>
+    <app-nav></app-nav>
+
+    <div ng-view></div>
+
+    <app-footer made-with="♥︎"></app-footer>
+  </div>
+</body>
+</html>
